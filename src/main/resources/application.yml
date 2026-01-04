@@ -1,9 +1,13 @@
 spring:
   application:
-    name: produtosapi
+    name: ${SPRING_APPLICATION_NAME}
+
   data:
     mongodb:
-      host: localhost
-      port: 27017
-      database: products
-      auto-index-creation: true
+      host: ${SPRING_DATA_MONGODB_HOST}
+      port: ${SPRING_DATA_MONGODB_PORT}
+      database: ${SPRING_DATA_MONGODB_DATABASE}
+      auto-index-creation: ${SPRING_DATA_MONGODB_AUTO_INDEX_CREATION}
+
+jwt:
+  secret: ${JWT_SECRET}
