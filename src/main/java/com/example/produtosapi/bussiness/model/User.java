@@ -29,7 +29,7 @@ public class User implements UserDetails {
     private String id;
     private String name;
 
-    @Indexed(unique = true)
+    //@Indexed(unique = true)
     private String email;
 
     private String password;
